@@ -1,10 +1,13 @@
-import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, TextInput, StyleSheet } from 'react-native';
 
-export default function App() {
+export default function Page() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Meu primeiro aplicativo</Text>
+      <Text style={styles.label}>Seu nome:</Text>
+      <TextInput style={styles.input} placeholder="Digite seu nome" />
+
+      <Text style={styles.label}>Quem ganha a copa:</Text>
+      <TextInput style={styles.input} placeholder="Seu palpite" />
     </View>
   );
 }
@@ -14,10 +17,18 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    padding: 20,
   },
-  text: {
-    fontSize: 20,
-    fontWeight: 'bold',
+  label: {
+    fontSize: 18,
+    marginBottom: 5,
+  },
+  input: {
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    marginBottom: 20,
+    paddingHorizontal: 10,
+    width: '80%',
   },
 });
